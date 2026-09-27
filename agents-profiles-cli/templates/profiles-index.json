@@ -1,0 +1,722 @@
+{
+  "business-analyst": {
+    "category": "business-analysis",
+    "title": "Business Analyst — Requirements & Process Analysis",
+    "role": "Business Analyst | Systems Analyst | Requirements Engineer"
+  },
+  "data-analyst": {
+    "category": "business-analysis",
+    "title": "Data Analyst — Data Analysis & Visualization",
+    "role": "Data Analyst | BI Engineer | Analytics Engineer"
+  },
+  "customer-success": {
+    "category": "business-revenue",
+    "title": "Customer Success — Customer Adoption & Retention",
+    "role": "Customer Success Manager | Account Manager | Customer Advocate"
+  },
+  "developer-advocate": {
+    "category": "business-revenue",
+    "title": "Developer Advocate — Community & Developer Engagement",
+    "role": "Developer Advocate | DevRel Engineer | Community Advocate"
+  },
+  "marketing-engineer": {
+    "category": "business-revenue",
+    "title": "Marketing Engineer — Technical Marketing & Developer Relations",
+    "role": "Marketing Engineer | DevRel | Technical Content Strategist"
+  },
+  "sales-engineer": {
+    "category": "business-revenue",
+    "title": "Sales Engineer — Technical Sales & Solutions Engineering",
+    "role": "Sales Engineer | Solutions Engineer | Technical Account Manager"
+  },
+  "technical-account-manager": {
+    "category": "business-revenue",
+    "title": "Technical Account Manager — Enterprise Post-Sales Technical Relationship",
+    "role": "Technical Account Manager | TAM | Enterprise Technical Advocate"
+  },
+  "aws-engineer": {
+    "category": "cloud-infra-architecture",
+    "title": "AWS Engineer — Amazon Web Services Specialist",
+    "role": "AWS Engineer | Cloud Engineer (AWS) | AWS Solutions Architect"
+  },
+  "azure-engineer": {
+    "category": "cloud-infra-architecture",
+    "title": "Azure Engineer — Microsoft Azure Specialist",
+    "role": "Azure Engineer | Cloud Engineer (Azure) | Azure Solutions Architect"
+  },
+  "cloud-architect": {
+    "category": "cloud-infra-architecture",
+    "title": "Cloud Architect — Multi-Cloud Strategy & Infrastructure Design",
+    "role": "Cloud Architect | Cloud Consultant | Infrastructure Strategist"
+  },
+  "gcp-engineer": {
+    "category": "cloud-infra-architecture",
+    "title": "GCP Engineer — Google Cloud Platform Specialist",
+    "role": "GCP Engineer | Cloud Engineer (GCP) | Google Cloud Architect"
+  },
+  "terraform-engineer": {
+    "category": "cloud-infra-architecture",
+    "title": "Terraform Engineer — Infrastructure as Code Specialist",
+    "role": "Terraform Engineer | IaC Engineer | Platform Automation Engineer"
+  },
+  "accessibility-engineer": {
+    "category": "compliance-legal-finance",
+    "title": "Accessibility Engineer — Accessibility & Inclusive Design Specialist",
+    "role": "Accessibility Engineer | A11y Specialist | Inclusive Design Advocate"
+  },
+  "compliance-officer": {
+    "category": "compliance-legal-finance",
+    "title": "Compliance Officer — Regulatory Compliance & Audit Specialist",
+    "role": "Compliance Officer | Compliance Engineer | Audit Specialist"
+  },
+  "finops-engineer": {
+    "category": "compliance-legal-finance",
+    "title": "FinOps Engineer — Cloud Cost Optimization & Financial Operations",
+    "role": "FinOps Engineer | Cloud Cost Engineer | Cloud Financial Analyst"
+  },
+  "legal-engineer": {
+    "category": "compliance-legal-finance",
+    "title": "Legal Engineer — Legal & Compliance Engineering",
+    "role": "Legal Engineer | LegalOps | Privacy Engineer | Compliance Automation Engineer"
+  },
+  "privacy-engineer": {
+    "category": "compliance-legal-finance",
+    "title": "Privacy Engineer — Data Privacy Engineering & Compliance Automation",
+    "role": "Privacy Engineer | Data Privacy Engineer | Privacy Tech Lead"
+  },
+  "content-strategist": {
+    "category": "content-communication",
+    "title": "Content Strategist — Content Strategy & Lifecycle Management",
+    "role": "Content Strategist | Content Manager | Editorial Lead"
+  },
+  "localization-engineer": {
+    "category": "content-communication",
+    "title": "Localization Engineer — Internationalization & Localization Specialist",
+    "role": "Localization Engineer | Internationalization (i18n) Engineer | L10n Specialist"
+  },
+  "proposal-writer": {
+    "category": "content-communication",
+    "title": "Proposal Writer — Technical Proposals & RFP Response",
+    "role": "Proposal Writer | RFP Specialist | Bid Manager"
+  },
+  "support-engineer": {
+    "category": "content-communication",
+    "title": "Support Engineer — Technical Support & Issue Resolution",
+    "role": "Support Engineer | Technical Support | Customer Support"
+  },
+  "tech-translator": {
+    "category": "content-communication",
+    "title": "Tech Translator — Technology Simplification & Plain Language",
+    "role": "Tech Translator | Technical Communicator | Plain Language Specialist"
+  },
+  "technical-writer": {
+    "category": "content-communication",
+    "title": "Technical Writer — Documentation & Knowledge Specialist",
+    "role": "Technical Writer | Documentation Engineer | Knowledge Manager"
+  },
+  "ai-engineer": {
+    "category": "data-intelligence",
+    "title": "AI Engineer — LLM & Generative AI Application Development",
+    "role": "AI Engineer | LLM Engineer | GenAI Developer | AI Application Engineer"
+  },
+  "analytics-engineer": {
+    "category": "data-intelligence",
+    "title": "Analytics Engineer — Data Transformation & Analytics Infrastructure",
+    "role": "Analytics Engineer | Data Transformation Engineer | BI Engineer"
+  },
+  "bi-engineer": {
+    "category": "data-intelligence",
+    "title": "BI Engineer — Business Intelligence & Visualization",
+    "role": "BI Engineer | Analytics Engineer | Reporting Specialist"
+  },
+  "data-architect": {
+    "category": "data-intelligence",
+    "title": "Data Architect — Enterprise Data Strategy & Modeling",
+    "role": "Data Architect | Enterprise Data Architect | Data Strategist"
+  },
+  "data-engineer": {
+    "category": "data-intelligence",
+    "title": "Data Engineer — Data Pipeline & Infrastructure Specialist",
+    "role": "Data Engineer | Data Pipeline Engineer | ETL Engineer"
+  },
+  "data-quality-engineer": {
+    "category": "data-intelligence",
+    "title": "Data Quality Engineer — Data Cleaning & Observability",
+    "role": "Data Quality Engineer | Data Observability Engineer | Data Cleaner"
+  },
+  "data-scientist": {
+    "category": "data-intelligence",
+    "title": "Data Scientist — Advanced Analytics, ML & Distributed Data Science",
+    "role": "Data Scientist | ML Engineer | AI Specialist"
+  },
+  "database-administrator": {
+    "category": "data-intelligence",
+    "title": "Database Administrator — Data Management & Optimization",
+    "role": "Database Administrator | DBA | Data Store Engineer"
+  },
+  "deep-learning-engineer": {
+    "category": "data-intelligence",
+    "title": "Deep Learning Engineer — Neural Networks & TensorFlow/PyTorch",
+    "role": "Deep Learning Engineer | DL Engineer | Neural Network Specialist"
+  },
+  "kafka-engineer": {
+    "category": "data-intelligence",
+    "title": "Kafka Engineer — Event Streaming & Data Pipeline Specialist",
+    "role": "Kafka Engineer | Streaming Engineer | Event Architect"
+  },
+  "llm-engineer": {
+    "category": "data-intelligence",
+    "title": "LLM Engineer — Large Language Model Specialization",
+    "role": "LLM Engineer | Language Model Specialist | GenAI Engineer"
+  },
+  "ml-engineer": {
+    "category": "data-intelligence",
+    "title": "ML Engineer — Production Machine Learning Engineering",
+    "role": "ML Engineer | Machine Learning Engineer | Applied ML Engineer"
+  },
+  "mlops-engineer": {
+    "category": "data-intelligence",
+    "title": "MLOps Engineer — Machine Learning Infrastructure & Operations Specialist",
+    "role": "MLOps Engineer | ML Infrastructure Engineer | ML Platform Engineer"
+  },
+  "architect": {
+    "category": "design-architecture",
+    "title": "Architect — System & Software Architect",
+    "role": "System Architect | Software Architect | Technical Lead"
+  },
+  "designer": {
+    "category": "design-architecture",
+    "title": "Designer — UI/UX Design Specialist",
+    "role": "UI/UX Designer | Product Designer | Design System Engineer"
+  },
+  "researcher": {
+    "category": "design-architecture",
+    "title": "Researcher — Academic & Market Research Specialist",
+    "role": "Researcher | Research Analyst | Knowledge Specialist"
+  },
+  "solutions-architect": {
+    "category": "design-architecture",
+    "title": "Solutions Architect — Customer-Facing Solution Design",
+    "role": "Solutions Architect | Customer Solutions Architect | Technical Pre-Sales Architect"
+  },
+  "usability-engineer": {
+    "category": "design-architecture",
+    "title": "Usability Engineer — User Research & Usability Testing",
+    "role": "Usability Engineer | UX Researcher | Human Factors Engineer"
+  },
+  "workflow-designer": {
+    "category": "design-architecture",
+    "title": "Workflow Designer — Multi-Agent Workflow & Orchestration Specialist",
+    "role": "Workflow Designer | Orchestration Architect | Automation Designer"
+  },
+  "android-engineer": {
+    "category": "engineering-dev",
+    "title": "Android Engineer — Native Android Development",
+    "role": "Android Engineer | Android Developer | Kotlin Engineer"
+  },
+  "automation-engineer": {
+    "category": "engineering-dev",
+    "title": "Automation Engineer — Process & Workflow Automation Specialist",
+    "role": "Automation Engineer | RPA Developer | Workflow Automation Engineer"
+  },
+  "backend-engineer": {
+    "category": "engineering-dev",
+    "title": "Backend Engineer — Server-Side Systems & API Development",
+    "role": "Backend Engineer | Server-Side Engineer | API Developer"
+  },
+  "developer": {
+    "category": "engineering-dev",
+    "title": "Developer — Code Generation & Implementation Specialist",
+    "role": "Developer | Software Engineer | Code Generator"
+  },
+  "embedded-engineer": {
+    "category": "engineering-dev",
+    "title": "Embedded Engineer — Firmware & Hardware-Near Development Specialist",
+    "role": "Embedded Engineer | Firmware Engineer | IoT Engineer"
+  },
+  "frontend-engineer": {
+    "category": "engineering-dev",
+    "title": "Frontend Engineer — Web UI & Browser Development Specialist",
+    "role": "Frontend Engineer | UI Engineer | Web Developer"
+  },
+  "ios-engineer": {
+    "category": "engineering-dev",
+    "title": "iOS Engineer — Native iOS & macOS Development",
+    "role": "iOS Engineer | iOS Developer | Apple Platform Engineer"
+  },
+  "mobile-engineer": {
+    "category": "engineering-dev",
+    "title": "Mobile Engineer — iOS, Android & Cross-Platform Development Specialist",
+    "role": "Mobile Engineer | iOS Developer | Android Developer | Cross-Platform Developer"
+  },
+  "reviewer": {
+    "category": "engineering-dev",
+    "title": "Reviewer — Code Review & Quality Gatekeeper",
+    "role": "Code Reviewer | Quality Assurance Engineer | Release Gatekeeper"
+  },
+  "ceo": {
+    "category": "executive",
+    "title": "CEO — Chief Executive Officer",
+    "role": "CEO | Chief Executive Officer | Executive Leader"
+  },
+  "cto": {
+    "category": "executive",
+    "title": "CTO — Chief Technology Officer",
+    "role": "CTO | Chief Technology Officer | Technology Strategist"
+  },
+  "vp-engineering": {
+    "category": "executive",
+    "title": "VP Engineering — Vice President of Engineering",
+    "role": "VP Engineering | Engineering Director | Head of Engineering"
+  },
+  "argocd-engineer": {
+    "category": "infrastructure-ops",
+    "title": "ArgoCD Engineer — GitOps & Continuous Delivery",
+    "role": "ArgoCD Engineer | GitOps Engineer | CD Specialist"
+  },
+  "chaos-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Chaos Engineer — Resilience & Fault Injection Specialist",
+    "role": "Chaos Engineer | Resilience Engineer | Reliability Tester"
+  },
+  "cicd-engineer": {
+    "category": "infrastructure-ops",
+    "title": "CI/CD Pipeline Engineer — Build & Delivery Pipeline Specialist",
+    "role": "CI/CD Engineer | Pipeline Engineer | Build Automation Engineer"
+  },
+  "dbre-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Database Reliability Engineer (DBRE) — Database Operations & SRE",
+    "role": "DBRE | Database Reliability Engineer | Database SRE"
+  },
+  "devops": {
+    "category": "infrastructure-ops",
+    "title": "DevOps — Infrastructure & Reliability Engineer",
+    "role": "DevOps Engineer | SRE | Infrastructure Architect"
+  },
+  "edge-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Edge / CDN Engineer — Edge Computing & Content Delivery",
+    "role": "Edge Engineer | CDN Engineer | Edge Architect"
+  },
+  "helm-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Helm Engineer — Kubernetes Package Management & Chart Authoring",
+    "role": "Helm Engineer | Chart Developer | K8s Package Manager"
+  },
+  "kubernetes-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Kubernetes Engineer — Container Orchestration Specialist",
+    "role": "Kubernetes Engineer | K8s Administrator | Cloud Native Platform Engineer"
+  },
+  "network-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Network Engineer — Network Architecture & Infrastructure",
+    "role": "Network Engineer | Network Architect | NetDevOps Engineer"
+  },
+  "operations": {
+    "category": "infrastructure-ops",
+    "title": "Operations — Day-to-Day System Operations Specialist",
+    "role": "Operations | System Operator | NOC Engineer"
+  },
+  "platform-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Platform Engineer — Internal Developer Platform Specialist",
+    "role": "Platform Engineer | Developer Experience Engineer | DevEx Engineer"
+  },
+  "service-mesh-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Service Mesh Engineer — Istio, Linkerd & Service Networking",
+    "role": "Service Mesh Engineer | Mesh Architect | Service Networking Specialist"
+  },
+  "site-reliability-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Site Reliability Engineer — Reliability & Incident Response Specialist",
+    "role": "Site Reliability Engineer | SRE | Reliability Engineer"
+  },
+  "it-support-engineer": {
+    "category": "it-support",
+    "title": "IT Support Engineer — Internal Technology Support",
+    "role": "IT Support Engineer | Helpdesk Engineer | IT Operations"
+  },
+  "cpp-engineer": {
+    "category": "language-specific",
+    "title": "C/C++ Engineer — Systems & Embedded Development Specialist",
+    "role": "C/C++ Engineer | Systems Programmer | Embedded Engineer"
+  },
+  "dotnet-engineer": {
+    "category": "language-specific",
+    "title": ".NET Engineer — C# & .NET Platform Specialist",
+    "role": ".NET Engineer | C# Developer | .NET Architect"
+  },
+  "go-engineer": {
+    "category": "language-specific",
+    "title": "Go Engineer — Cloud & Backend Development Specialist",
+    "role": "Go Engineer | Golang Developer | Cloud Engineer"
+  },
+  "java-engineer": {
+    "category": "language-specific",
+    "title": "Java Engineer — JVM & Enterprise Development Specialist",
+    "role": "Java Engineer | JVM Developer | Enterprise Engineer"
+  },
+  "node-engineer": {
+    "category": "language-specific",
+    "title": "Node.js Engineer — JavaScript & TypeScript Runtime Specialist",
+    "role": "Node.js Engineer | JavaScript Engineer | TypeScript Engineer | Full-Stack JS"
+  },
+  "php-engineer": {
+    "category": "language-specific",
+    "title": "PHP Engineer — Web Development Specialist",
+    "role": "PHP Engineer | PHP Developer | Web Artisan"
+  },
+  "python-engineer": {
+    "category": "language-specific",
+    "title": "Python Engineer — Python Development Specialist",
+    "role": "Python Engineer | Python Developer | Pythonista"
+  },
+  "ruby-engineer": {
+    "category": "language-specific",
+    "title": "Ruby Engineer — Web & Scripting Development Specialist",
+    "role": "Ruby Engineer | Ruby Developer | Rails Developer"
+  },
+  "rust-engineer": {
+    "category": "language-specific",
+    "title": "Rust Engineer — Systems Programming & Performance Specialist",
+    "role": "Rust Engineer | Rust Developer | Systems Programmer"
+  },
+  "swift-engineer": {
+    "category": "language-specific",
+    "title": "Swift Engineer — Apple Ecosystem & Cross-Platform Developer",
+    "role": "Swift Engineer | iOS Developer | SwiftUI Engineer"
+  },
+  "zig-engineer": {
+    "category": "language-specific",
+    "title": "Zig Engineer — Modern Systems Programming Specialist",
+    "role": "Zig Engineer | Zig Developer | Systems Programmer"
+  },
+  "agile-coach": {
+    "category": "orchestration",
+    "title": "Agile Coach — Agile Transformation & Coaching",
+    "role": "Agile Coach | Enterprise Agile Coach | Agile Transformation Lead"
+  },
+  "assistant": {
+    "category": "orchestration",
+    "title": "Assistant — Primary Agent & Orchestrator",
+    "role": "Primary Assistant | Agent Orchestrator | User Interface"
+  },
+  "engineering-manager": {
+    "category": "orchestration",
+    "title": "Engineering Manager — Frontline Engineering Leadership",
+    "role": "Engineering Manager | EM | Tech Lead Manager"
+  },
+  "planner": {
+    "category": "orchestration",
+    "title": "Planner — Technical Research & Strategy Planner",
+    "role": "Planner | Technical Strategist | Research Analyst"
+  },
+  "product-manager": {
+    "category": "orchestration",
+    "title": "Product Manager — Strategy & Requirements",
+    "role": "Product Manager | Product Owner | Business Analyst"
+  },
+  "program-manager": {
+    "category": "orchestration",
+    "title": "Program Manager — Cross-Team Delivery & Program Governance",
+    "role": "Program Manager | Technical Program Manager | TPM"
+  },
+  "project-manager": {
+    "category": "orchestration",
+    "title": "Project Manager — Project Planning & Execution",
+    "role": "Project Manager | Program Manager | Delivery Lead"
+  },
+  "scrum-master": {
+    "category": "orchestration",
+    "title": "Scrum Master — Agile Process Facilitator",
+    "role": "Scrum Master | Agile Coach | Process Facilitator"
+  },
+  "hr-manager": {
+    "category": "people-culture",
+    "title": "HR Manager — People Operations & Culture",
+    "role": "HR Manager | People Operations | Talent Manager"
+  },
+  "technical-recruiter": {
+    "category": "people-culture",
+    "title": "Technical Recruiter — Technical Talent Acquisition",
+    "role": "Technical Recruiter | Talent Acquisition Specialist | Sourcer"
+  },
+  "training-specialist": {
+    "category": "people-culture",
+    "title": "Training Specialist — Learning & Development",
+    "role": "Training Specialist | Learning & Development | Instructional Designer"
+  },
+  "change-manager": {
+    "category": "planning-oversight",
+    "title": "Change Manager — Organizational Change Management",
+    "role": "Change Manager | Transformation Lead | Change Advocate"
+  },
+  "cost-estimator": {
+    "category": "planning-oversight",
+    "title": "Cost Estimator — Engineering Cost Estimation & Planning",
+    "role": "Cost Estimator | Project Estimator | Effort Analyst"
+  },
+  "risk-manager": {
+    "category": "planning-oversight",
+    "title": "Risk Manager — Risk Identification & Mitigation",
+    "role": "Risk Manager | Risk Analyst | Project Risk Officer"
+  },
+  "vendor-manager": {
+    "category": "planning-oversight",
+    "title": "Vendor Manager — Vendor & Third-Party Management",
+    "role": "Vendor Manager | Supplier Manager | Third-Party Risk Manager"
+  },
+  "api-engineer": {
+    "category": "specialized-engineering",
+    "title": "API Engineer — API Design & Integration Specialist",
+    "role": "API Engineer | API Designer | API Platform Engineer"
+  },
+  "appsec-engineer": {
+    "category": "specialized-engineering",
+    "title": "Application Security Engineer — Secure Development & Application Defense",
+    "role": "AppSec Engineer | Application Security Engineer | Product Security"
+  },
+  "data-protection-engineer": {
+    "category": "specialized-engineering",
+    "title": "Data Protection Engineer — Encryption & Data Security",
+    "role": "Data Protection Engineer | Encryption Engineer | Data Security Specialist"
+  },
+  "devsecops-engineer": {
+    "category": "specialized-engineering",
+    "title": "DevSecOps Engineer — Security-Integrated DevOps",
+    "role": "DevSecOps Engineer | Security Automation Engineer | Pipeline Security"
+  },
+  "iam-engineer": {
+    "category": "specialized-engineering",
+    "title": "IAM Engineer — Identity & Access Management",
+    "role": "IAM Engineer | Identity Engineer | Access Management Specialist"
+  },
+  "incident-response-engineer": {
+    "category": "specialized-engineering",
+    "title": "Incident Response Engineer — Security Incident Response",
+    "role": "Incident Response Engineer | IR Analyst | SOC Engineer | DFIR"
+  },
+  "integration-engineer": {
+    "category": "specialized-engineering",
+    "title": "Integration Engineer — System Integration & Middleware Specialist",
+    "role": "Integration Engineer | Middleware Engineer | EAI Engineer"
+  },
+  "migration-engineer": {
+    "category": "specialized-engineering",
+    "title": "Migration Engineer — Data & System Migration Specialist",
+    "role": "Migration Engineer | Data Migration Specialist | System Migration Architect"
+  },
+  "observability-engineer": {
+    "category": "specialized-engineering",
+    "title": "Observability Engineer — Monitoring, Logging & Tracing Specialist",
+    "role": "Observability Engineer | Monitoring Engineer | Telemetry Engineer"
+  },
+  "release-engineer": {
+    "category": "specialized-engineering",
+    "title": "Release Engineer — Release Management & Deployment Orchestration",
+    "role": "Release Engineer | Release Manager | Deployment Coordinator"
+  },
+  "secrets-vault-engineer": {
+    "category": "specialized-engineering",
+    "title": "Secrets & Vault Engineer — Secrets Management & Encryption",
+    "role": "Secrets Engineer | Vault Engineer | Encryption Specialist"
+  },
+  "security-engineer": {
+    "category": "specialized-engineering",
+    "title": "Security Engineer — Security & Compliance Specialist",
+    "role": "Security Engineer | Security Architect | Compliance Analyst"
+  },
+  "soc-analyst": {
+    "category": "specialized-engineering",
+    "title": "SOC Analyst — Security Operations & Incident Monitoring",
+    "role": "SOC Analyst | Security Operations Analyst | Threat Monitor"
+  },
+  "agent-builder": {
+    "category": "system-extensibility",
+    "title": "Agent Builder — Agent Creation & Configuration Specialist",
+    "role": "Agent Builder | Agent Creator | Agent Configurator"
+  },
+  "agent-evaluator": {
+    "category": "system-extensibility",
+    "title": "Agent Evaluator — Agent Testing & Quality Evaluation Specialist",
+    "role": "Agent Evaluator | QA Engineer (Agents) | Benchmark Analyst"
+  },
+  "knowledge-curator": {
+    "category": "system-extensibility",
+    "title": "Knowledge Curator — Knowledge Base & Memory Management Specialist",
+    "role": "Knowledge Curator | Knowledge Manager | Memory Architect"
+  },
+  "mcp-server-developer": {
+    "category": "system-extensibility",
+    "title": "MCP Server Developer — Tool & Model Context Protocol Specialist",
+    "role": "MCP Server Developer | Tool Builder | Integration Developer"
+  },
+  "prompt-engineer": {
+    "category": "system-extensibility",
+    "title": "Prompt Engineer — Prompt Design & Optimization Specialist",
+    "role": "Prompt Engineer | Prompt Designer | Interaction Architect"
+  },
+  "skill-creator": {
+    "category": "system-extensibility",
+    "title": "Skill Creator — Reusable Capability & Skill Developer",
+    "role": "Skill Creator | Skill Developer | Capability Packager"
+  },
+  "e2e-automation-engineer": {
+    "category": "testing-quality",
+    "title": "E2E Automation Engineer — End-to-End Test Automation Specialist",
+    "role": "E2E Automation Engineer | Test Automation Architect | SDET"
+  },
+  "penetration-tester": {
+    "category": "testing-quality",
+    "title": "Penetration Tester — Offensive Security & Vulnerability Assessment",
+    "role": "Penetration Tester | Ethical Hacker | Security Assessor"
+  },
+  "performance-engineer": {
+    "category": "testing-quality",
+    "title": "Performance Engineer — Performance Testing & Optimization",
+    "role": "Performance Engineer | Performance Tester | Capacity Planner"
+  },
+  "qa-engineer": {
+    "category": "testing-quality",
+    "title": "QA Engineer — Quality Assurance & Test Engineering",
+    "role": "QA Engineer | Test Engineer | Quality Assurance Engineer"
+  },
+  "tester": {
+    "category": "testing-quality",
+    "title": "Tester — Quality Assurance & Test Engineer",
+    "role": "QA Engineer | Test Automation Engineer | SDET"
+  },
+  "elixir-engineer": {
+    "category": "language-specific",
+    "title": "Elixir Engineer — Fault-Tolerant & Concurrent Systems",
+    "role": "Elixir Engineer | Phoenix Developer | BEAM/OTP Specialist"
+  },
+  "haskell-engineer": {
+    "category": "language-specific",
+    "title": "Haskell Engineer — Pure Functional Programming Specialist",
+    "role": "Haskell Engineer | Functional Programmer | Type-Level Developer"
+  },
+  "kotlin-engineer": {
+    "category": "language-specific",
+    "title": "Kotlin Engineer — JVM & Modern Multiplatform Developer",
+    "role": "Kotlin Engineer | Android Developer | JVM Architect"
+  },
+  "scala-engineer": {
+    "category": "language-specific",
+    "title": "Scala Engineer — Functional/OOP & Type-Level Architecture",
+    "role": "Scala Engineer | JVM Functional Developer | Akka/ZIO Specialist"
+  },
+  "r-engineer": {
+    "category": "language-specific",
+    "title": "R Engineer — Statistical Computing & Data Visualization",
+    "role": "R Engineer | Data Scientist | Statistical Programmer"
+  },
+  "typescript-engineer": {
+    "category": "language-specific",
+    "title": "TypeScript Engineer — Type-Safe Full-Stack Development",
+    "role": "TypeScript Engineer | Type-System Architect | Full-Stack Developer"
+  },
+  "flutter-engineer": {
+    "category": "engineering-dev",
+    "title": "Flutter Engineer — Cross-Platform UI Development",
+    "role": "Flutter Engineer | Dart Developer | Cross-Platform Specialist"
+  },
+  "redis-infra-engineer": {
+    "category": "infrastructure-ops",
+    "title": "Redis Engineer (Infrastructure) — Caching & Real-Time Data Infrastructure",
+    "role": "Redis Engineer | Cache Architect | Real-Time Data Specialist"
+  },
+  "scientific-computing-engineer": {
+    "category": "data-intelligence",
+    "title": "Scientific Computing Engineer — Numerical Computing & HPC",
+    "role": "Scientific Computing Engineer | HPC Specialist | Numerical Analyst"
+  },
+  "blockchain-engineer": {
+    "category": "specialized-engineering",
+    "title": "Blockchain Engineer — Smart Contracts & Decentralized Applications",
+    "role": "Blockchain Engineer | Solidity Developer | Web3 Engineer"
+  },
+  "temporal-engineer": {
+    "category": "specialized-engineering",
+    "title": "Temporal Engineer — Durable Execution & Workflow Orchestration",
+    "role": "Temporal Engineer | Workflow Architect | Durable Execution Specialist"
+  },
+  "visual-creator": {
+    "category": "content-communication",
+    "title": "Visual Creator — AI Image Generation & Graphic Design",
+    "role": "Visual Creator | Graphic Designer | AI Image Artist"
+  },
+  "video-producer": {
+    "category": "content-communication",
+    "title": "Video Producer — Video Production & Motion Graphics",
+    "role": "Video Producer | Video Editor | Motion Graphics Artist"
+  },
+  "game-engineer": {
+    "category": "game-development",
+    "title": "Game Engineer — Game Development & Engine Programming",
+    "role": "Game Engineer | Unity/Unreal/Godot Developer | Gameplay Programmer"
+  },
+  "react-engineer": {
+    "category": "frontend-frameworks",
+    "title": "React Engineer — Component Architecture & Frontend Engineering",
+    "role": "React Engineer | Next.js Developer | Frontend Architect"
+  },
+  "vue-engineer": {
+    "category": "frontend-frameworks",
+    "title": "Vue Engineer — Reactive Frontend Development",
+    "role": "Vue Engineer | Nuxt Developer | Reactive UI Specialist"
+  },
+  "postgresql-engineer": {
+    "category": "database-specialists",
+    "title": "PostgreSQL Engineer — Query Optimization & Database Performance",
+    "role": "PostgreSQL Engineer | DBA | Query Optimizer"
+  },
+  "mongodb-engineer": {
+    "category": "database-specialists",
+    "title": "MongoDB Engineer — Document Modeling & Aggregation",
+    "role": "MongoDB Engineer | NoSQL Architect | Document Database Specialist"
+  },
+  "redis-engineer": {
+    "category": "database-specialists",
+    "title": "Redis Engineer — Caching, Data Structures & Cluster Topology",
+    "role": "Redis Engineer | Cache Architect | Data Structure Specialist"
+  },
+  "elasticsearch-engineer": {
+    "category": "database-specialists",
+    "title": "Elasticsearch Engineer — Search & Relevance Engineering",
+    "role": "Elasticsearch Engineer | Search Architect | Relevance Engineer"
+  },
+  "cassandra-engineer": {
+    "category": "database-specialists",
+    "title": "Cassandra Engineer — Distributed Database & Consistency Tuning",
+    "role": "Cassandra Engineer | NoSQL Architect | Distributed Database Specialist"
+  },
+  "pinecone-engineer": {
+    "category": "database-specialists",
+    "title": "Pinecone Engineer — Vector Search & Embedding Strategy",
+    "role": "Pinecone Engineer | Vector Database Specialist | Embedding Architect"
+  },
+  "qdrant-engineer": {
+    "category": "database-specialists",
+    "title": "Qdrant Engineer — Vector Search & HNSW Optimization",
+    "role": "Qdrant Engineer | Vector Search Specialist | Quantization Expert"
+  },
+  "neo4j-engineer": {
+    "category": "database-specialists",
+    "title": "Neo4j Engineer — Graph Modeling & Cypher Query Optimization",
+    "role": "Neo4j Engineer | Graph Database Architect | Cypher Specialist"
+  },
+  "influxdb-engineer": {
+    "category": "database-specialists",
+    "title": "InfluxDB Engineer — Time-Series Data & Flux Query Optimization",
+    "role": "InfluxDB Engineer | Time-Series Architect | Flux Specialist"
+  },
+  "oracle-cloud-engineer": {
+    "category": "cloud-providers",
+    "title": "Oracle Cloud Engineer — OCI Infrastructure & Autonomous Database",
+    "role": "Oracle Cloud Engineer | OCI Architect | Enterprise Cloud Specialist"
+  }
+}

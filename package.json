@@ -1,0 +1,16 @@
+{
+  "name": "agents-profiles",
+  "version": "2.1.0",
+  "description": "Multi-Agent Engineering System — 144 agent profiles across 20 categories",
+  "private": true,
+  "scripts": {
+    "validate": "bash validate.sh",
+    "generate": "python3 native-agents/generate.py",
+    "regenerate": "python3 native-agents/generate.py && echo 'Regenerated native agent files'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CrimsonDevil333333/agents-profiles.git"
+  },
+  "license": "MIT"
+}

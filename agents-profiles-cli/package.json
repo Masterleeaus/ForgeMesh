@@ -1,0 +1,70 @@
+{
+  "name": "agents-profiles-cli",
+  "version": "0.2.1",
+  "description": "Multi-Agent System Setup Wizard — Configure any AI coding assistant with 144 specialist agents across 22 categories. Supports OpenCode, Claude Code, Copilot, Cursor, Windsurf, Aider, Continue.dev, and custom providers.",
+  "type": "module",
+  "bin": {
+    "agents-profiles-cli": "./dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/bin/cli.ts",
+    "start": "node dist/bin/cli.js",
+    "prepublishOnly": "npm run build",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "multi-agent",
+    "orchestrator",
+    "cli",
+    "opencode",
+    "claude",
+    "claude-code",
+    "copilot",
+    "cursor",
+    "windsurf",
+    "aider",
+    "continue",
+    "setup",
+    "configuration",
+    "agent-profiles",
+    "llm",
+    "devops",
+    "project-setup",
+    "scaffolding"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.8.0",
+    "commander": "^12.0.0",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrimsonDevil333333/agents-profiles.git"
+  },
+  "homepage": "https://github.com/CrimsonDevil333333/agents-profiles",
+  "bugs": {
+    "url": "https://github.com/CrimsonDevil333333/agents-profiles/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+# .agent_init — Multi-Agent System Configuration
+# Save this file in your project root for fully automatic setup.
+# When present, skill.md reads this silently and skips all questions.
+
+project_name: "my-project"          # Name for the agent system
+agent_depth: "detailed"             # focused | detailed | production
+priority_agents: 5                  # How many priority agents to select first (3-10)
+additional_agents: []               # Extra roles beyond auto-detect (e.g., ["game-designer", "compliance-officer"])
+custom_traits: {}                   # Override traits per agent (e.g., { architect: ["pragmatic","visionary"] })
