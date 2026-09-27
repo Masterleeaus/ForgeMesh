@@ -1,10 +1,10 @@
 {
-  "name": "agents-profiles-cli",
+  "name": "forgemesh",
   "version": "0.2.1",
-  "description": "Multi-Agent System Setup Wizard — Configure any AI coding assistant with 144 specialist agents across 22 categories. Supports OpenCode, Claude Code, Copilot, Cursor, Windsurf, Aider, Continue.dev, and custom providers.",
+  "description": "ForgeMesh Adaptive Engineering Workforce — repository intelligence, capability mapping, specialist workforce composition, and multi-platform AI engineering configuration.",
   "type": "module",
   "bin": {
-    "agents-profiles-cli": "./dist/bin/cli.js"
+    "forgemesh": "./dist/bin/cli.js"
   },
   "files": [
     "dist",
@@ -24,26 +24,25 @@
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
+    "forgemesh",
     "ai",
     "agents",
     "multi-agent",
+    "adaptive-workforce",
+    "workforce-compiler",
+    "repository-intelligence",
     "orchestrator",
     "cli",
     "opencode",
-    "claude",
     "claude-code",
     "copilot",
     "cursor",
     "windsurf",
     "aider",
     "continue",
-    "setup",
-    "configuration",
-    "agent-profiles",
     "llm",
     "devops",
-    "project-setup",
-    "scaffolding"
+    "software-engineering"
   ],
   "license": "MIT",
   "dependencies": {
@@ -58,11 +57,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CrimsonDevil333333/agents-profiles.git"
+    "url": "git+https://github.com/Masterleeaus/ForgeMesh.git"
   },
-  "homepage": "https://github.com/CrimsonDevil333333/agents-profiles",
+  "homepage": "https://github.com/Masterleeaus/ForgeMesh",
   "bugs": {
-    "url": "https://github.com/CrimsonDevil333333/agents-profiles/issues"
+    "url": "https://github.com/Masterleeaus/ForgeMesh/issues"
   },
   "publishConfig": {
     "access": "public"
