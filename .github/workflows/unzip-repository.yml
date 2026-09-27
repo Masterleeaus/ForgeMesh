@@ -1,0 +1,58 @@
+name: Unpack repository archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'agents-profiles-main.zip'
+      - '.github/workflows/unzip-repository.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Unpack archive into repository root
+        shell: bash
+        run: |
+          set -euo pipefail
+          ZIP='agents-profiles-main.zip'
+          WORK="$(mktemp -d)"
+          unzip -q "$ZIP" -d "$WORK"
+
+          shopt -s dotglob nullglob
+          entries=("$WORK"/*)
+          if [ "${#entries[@]}" -eq 1 ] && [ -d "${entries[0]}" ]; then
+            SOURCE="${entries[0]}"
+          else
+            SOURCE="$WORK"
+          fi
+
+          for item in "$SOURCE"/*; do
+            name="$(basename "$item")"
+            [ "$name" = '.git' ] && continue
+            [ "$name" = '.github' ] && continue
+            cp -a "$item" ./
+          done
+
+          rm -f "$ZIP"
+
+      - name: Commit unpacked files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Unpack repository source archive'
+          git push
