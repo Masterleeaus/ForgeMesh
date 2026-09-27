@@ -1,291 +1,298 @@
+<div align="center">
+
 ForgeMesh
 
 Adaptive Engineering Workforce
 
-ForgeMesh analyzes a software system and assembles the specialist AI engineering workforce required to build, audit, improve, and operate it.
+Repository intelligence that assembles the right specialist AI engineering team for the system and the work.
 
-Scan the system. Assemble the specialists. Execute with evidence.
+<br />
 
-ForgeMesh is a repository-intelligence and workforce-orchestration platform for software engineering.
+Scan the system · Map the architecture · Assemble the specialists · Execute with evidence
 
-Instead of asking developers to manually choose agents, prompts, or tools, ForgeMesh examines the system itself. It identifies the technologies, architecture, dependencies, infrastructure, risks, and engineering requirements present in a codebase, then selects the specialist capabilities appropriate to the work.
-
-Those specialists are assembled into a coordinated engineering mesh with explicit responsibilities, structured handoffs, bounded authority, independent verification, and evidence-backed outcomes.
-
-The result is not a single general-purpose coding agent.
-
-It is an adaptive engineering workforce constructed for the system and task at hand.
+<br />
+</div>
 
 ⸻
 
-The Idea
+Overview
 
-Modern software systems rarely require one kind of expertise.
+ForgeMesh is an adaptive engineering workforce platform that analyzes software systems and determines what specialist expertise is required to build, audit, improve, and operate them.
 
-A production application may simultaneously require:
+Instead of starting with a fixed group of agents, ForgeMesh starts with the software system itself.
 
-* architecture
-* frontend engineering
-* backend engineering
-* database engineering
-* infrastructure
-* security
-* testing
-* accessibility
-* performance engineering
-* AI engineering
-* deployment
-* compliance
-* incident response
-* technical review
+It examines the repository, identifies its architecture and technology stack, evaluates relevant engineering signals and risks, and selects the smallest useful combination of specialists from a broad engineering capability registry.
 
-A general-purpose coding agent must attempt to reason across all of these disciplines at once.
+Those specialists are organized into a coordinated workforce with explicit responsibilities, structured handoffs, bounded authority, platform-specific configuration, and independent verification.
 
-ForgeMesh takes a different approach.
-
-It maintains a large capability registry of specialist engineering roles and activates only the expertise justified by the project and requested work.
-
-Repository
-    │
-    ▼
-System Scan
-    │
-    ▼
-Architecture + Technology Model
-    │
-    ▼
-Capability / Risk Analysis
-    │
-    ▼
-Workforce Compiler
-    │
-    ▼
-Specialist Engineering Mesh
-    │
-    ▼
-Platform Compilation
-    │
-    ▼
-Governed Execution
-    │
-    ▼
-Independent Verification
-    │
-    ▼
-Evidence + Outcomes
+ForgeMesh does not ask which agents you want. It determines which engineering capabilities the work requires.
 
 ⸻
 
-Workforce Compiler
+How ForgeMesh Works
 
-The central ForgeMesh concept is the Workforce Compiler.
-
-Traditional agent systems begin with agents and ask:
-
-What should these agents do?
-
-ForgeMesh begins with the system and asks:
-
-What expertise does this system actually require?
-
-The compiler combines:
-
-System evidence
-+
-Architecture
-+
-Technology stack
-+
-User objective
-+
-Detected risks
-+
-Capability registry
-+
-Authority constraints
-=
-Engineering workforce
-
-For example, ForgeMesh may inspect a TypeScript application using Next.js, PostgreSQL, Redis, Docker, GitHub Actions, and AWS.
-
-Rather than activating hundreds of available specialists, it might construct:
-
-Engineering Manager
-        │
-        ▼
-Solutions Architect
-        │
- ┌──────┼────────────┐
- ▼      ▼            ▼
-Next.js PostgreSQL  Security
-Engineer Engineer   Engineer
- │       │            │
- ▼       ▼            ▼
-Testing  Database    AppSec
-         Reliability
-     \     │        /
-      \    │       /
-       ▼   ▼      ▼
-       Independent Reviewer
-
-Every specialist should have a reason for being selected.
-
-Unused capabilities remain dormant.
+┌──────────────────────────────┐
+│     Repository / Workspace   │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│     Repository Intelligence  │
+│                              │
+│  Stack · Services · Data     │
+│  Tests · Infrastructure      │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│        System Model          │
+│                              │
+│ Architecture · Dependencies  │
+│ Boundaries · Risks · Signals │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│      Workforce Compiler      │
+│                              │
+│ Goal + Evidence + Capability │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│       Specialist Mesh        │
+│                              │
+│ Architecture · Engineering   │
+│ Security · Data · QA · Ops   │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│      Platform Compiler       │
+│                              │
+│ Claude · Copilot · Cursor    │
+│ OpenCode · Aider · Local AI  │
+└──────────────┬───────────────┘
+               │
+               ▼
+┌──────────────────────────────┐
+│     Governed Execution       │
+│                              │
+│ Handoffs · Tests · Review    │
+│ Verification · Evidence      │
+└──────────────────────────────┘
 
 ⸻
 
-Repository Intelligence
+Core Architecture
 
-ForgeMesh begins by understanding the software system.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-The scanner can identify signals including:
+🔎 Repository Intelligence
 
-Languages
+ForgeMesh analyzes a project before constructing its workforce.
 
-* TypeScript
-* JavaScript
-* Python
-* Go
-* Rust
-* Java
-* Kotlin
-* PHP
-* Ruby
-* C/C++
-* C#
-* Swift
-* Dart
-* Scala
-* Elixir
-* and many others
+Detection can include:
 
-Frameworks
-
-* React
-* Next.js
-* Vue
-* Nuxt
-* Angular
-* Svelte
-* SolidJS
-* Express
-* NestJS
-* Django
-* FastAPI
-* Rails
-* Laravel
-* Spring Boot
-* Flutter
-* React Native
-
-Data systems
-
-* PostgreSQL
-* MySQL
-* SQLite
-* MongoDB
-* Redis
-* Cassandra
-* DynamoDB
-* Firestore
-* Elasticsearch
-* Neo4j
-* ClickHouse
-* vector databases
-* analytics platforms
-
-Infrastructure
-
-* Docker
-* Kubernetes
-* Helm
-* CI/CD
-* GitHub Actions
-* cloud infrastructure
-* serverless systems
-* service meshes
-* edge environments
-* deployment configuration
-
-Engineering signals
-
-ForgeMesh also examines:
-
+* languages and frameworks
+* applications and packages
+* APIs and services
+* databases and data infrastructure
 * package managers
-* monorepo structure
-* application boundaries
-* APIs
-* services
-* tests
-* deployment configuration
+* CI/CD systems
+* cloud infrastructure
+* containers and orchestration
+* testing frameworks
 * AI/ML dependencies
 * observability
-* message queues
 * realtime systems
 * mobile applications
-* infrastructure-as-code
-* security tooling
+* architecture patterns
 
-These signals become the evidence used to construct the project’s system model.
+</td>
+<td width="50%" valign="top">
+
+🧠 System Model
+
+Repository evidence is normalized into a machine-readable representation of the software system.
+
+The model can describe:
+
+* applications
+* services
+* packages
+* APIs
+* databases
+* queues
+* infrastructure
+* deployment surfaces
+* external integrations
+* tests
+* security boundaries
+* dependencies
+
+This gives every downstream specialist a shared architectural foundation.
+
+</td>
+</tr>
+</table>
 
 ⸻
 
-System Model
+The Workforce Compiler
 
-Raw repository files are not the final representation of a software system.
+The Workforce Compiler is the central ForgeMesh component.
 
-ForgeMesh converts detected evidence into a normalized model of the project.
+Traditional multi-agent systems often begin with a predetermined collection of agents and attempt to divide work between them.
 
-The model can represent:
+ForgeMesh reverses that relationship.
 
-Applications
-Services
-Packages
-Libraries
-APIs
-Databases
-Queues
-Infrastructure
-Deployment surfaces
-External integrations
-AI systems
-Tests
-Security boundaries
-Dependencies
+PROJECT EVIDENCE
+       +
+SYSTEM ARCHITECTURE
+       +
+USER OBJECTIVE
+       +
+DETECTED RISKS
+       +
+CAPABILITY REGISTRY
+       +
+AUTHORITY CONSTRAINTS
+       │
+       ▼
+┌─────────────────────────┐
+│   WORKFORCE COMPILER    │
+└────────────┬────────────┘
+             │
+             ▼
+ TASK-SPECIFIC WORKFORCE
 
-This allows later reasoning to operate against an explicit architecture model instead of repeatedly interpreting an unstructured repository.
+The objective is minimum sufficient workforce.
+
+Having hundreds of available specialists does not mean hundreds should participate.
+
+For a particular task, ForgeMesh might determine that only eight are required.
+
+⸻
+
+Example Workforce
+
+Given a production application using:
+
+<table>
+<tr>
+<td><strong>Application</strong></td>
+<td>Next.js + TypeScript</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td><strong>Cache</strong></td>
+<td>Redis</td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td>Docker + AWS</td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>GitHub Actions</td>
+</tr>
+</table>
+
+and the objective:
+
+Make this system production ready.
+
+ForgeMesh may construct:
+
+                  Engineering Manager
+                          │
+                          ▼
+                 Solutions Architect
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+          ▼               ▼               ▼
+       Next.js        PostgreSQL       Security
+       Engineer        Engineer        Engineer
+          │               │               │
+          ▼               ▼               ▼
+     TypeScript         Database         AppSec
+      Engineer        Reliability
+          │               │               │
+          └───────────────┼───────────────┘
+                          │
+                    ┌─────┴─────┐
+                    ▼           ▼
+                 Testing      DevOps
+                    │           │
+                    └─────┬─────┘
+                          ▼
+                Independent Reviewer
+
+The workforce changes when the objective changes.
+
+The repository may remain identical while ForgeMesh constructs a completely different team for:
+
+* security auditing
+* database optimization
+* architecture modernization
+* feature development
+* incident investigation
+* accessibility
+* performance
+* AI integration
+* deployment
+* technical debt reduction
 
 ⸻
 
 Capability Registry
 
-ForgeMesh contains a broad specialist capability registry spanning hundreds of engineering roles.
+ForgeMesh maintains a broad registry of specialist engineering capabilities.
 
-The registry covers areas such as:
+The registry currently spans hundreds of specialist roles across software engineering and adjacent technical disciplines.
+
+<table>
+<tr>
+<td width="33%" valign="top">
 
 Engineering
 
 * frontend
 * backend
 * full-stack
-* API engineering
 * mobile
 * desktop
+* APIs
 * distributed systems
 * realtime systems
 * embedded systems
+* language specialists
+
+</td>
+<td width="33%" valign="top">
 
 Architecture
 
+* solutions architecture
 * enterprise architecture
-* solution architecture
-* domain architecture
 * security architecture
+* domain architecture
 * event-driven architecture
 * mobile architecture
 * information architecture
+* workflow design
 
-AI & Machine Learning
+</td>
+<td width="33%" valign="top">
+
+AI & ML
 
 * AI engineering
 * LLM engineering
@@ -293,24 +300,30 @@ AI & Machine Learning
 * agent engineering
 * machine learning
 * deep learning
-* computer vision
 * NLP
+* computer vision
 * LLMOps
 * AI safety
-* evaluation
-* prompt engineering
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
 
 Data
 
 * data engineering
 * data science
-* analytics engineering
+* analytics
 * data architecture
-* data governance
+* governance
 * data quality
 * data observability
 * realtime analytics
-* data platforms
+* vector databases
+
+</td>
+<td width="33%" valign="top">
 
 Infrastructure
 
@@ -320,24 +333,29 @@ Infrastructure
 * Docker
 * Kubernetes
 * GitOps
-* cloud architecture
 * networking
-* edge computing
-* infrastructure testing
+* cloud architecture
+* edge systems
+
+</td>
+<td width="33%" valign="top">
 
 Security
 
-* application security
+* AppSec
 * cloud security
 * DevSecOps
-* penetration testing
-* threat modelling
-* zero trust
 * IAM
-* cryptography
+* threat modelling
+* penetration testing
 * incident response
-* digital forensics
+* cryptography
 * supply-chain security
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
 
 Quality
 
@@ -346,212 +364,206 @@ Quality
 * integration testing
 * E2E testing
 * API testing
-* contract testing
-* performance testing
 * fuzz testing
-* visual testing
+* performance testing
 * security testing
 
-Governance & Compliance
+</td>
+<td width="33%" valign="top">
 
-Capabilities also extend into:
+Governance
 
 * privacy engineering
 * AI governance
-* GDPR
 * SOC 2
 * ISO 27001
+* GDPR
 * PCI DSS
 * HIPAA
 * accessibility
 * audit
-* records management
-* vendor risk
-* FinOps
 
-The registry is intentionally much larger than the workforce activated for any individual task.
+</td>
+<td width="33%" valign="top">
 
-ForgeMesh selects specialists. It does not simply unleash every available agent.
+Specialized
 
-⸻
+* payments
+* fintech
+* e-commerce
+* WebRTC
+* blockchain
+* robotics
+* GPU computing
+* GIS
+* AR/VR
+* automation
 
-Dynamic Workforce Composition
+</td>
+</tr>
+</table>
 
-Workforces are generated from project evidence and the objective being pursued.
-
-Consider the same repository with three different goals.
-
-Goal: Improve security
-
-ForgeMesh might activate:
-
-Security Architect
-Application Security Engineer
-IAM Specialist
-Dependency/Supply Chain Specialist
-Penetration Tester
-Security Tester
-Independent Reviewer
-
-Goal: Improve database performance
-
-The workforce could instead become:
-
-Solutions Architect
-Database Engineer
-PostgreSQL Specialist
-Database Reliability Engineer
-Performance Engineer
-Test Engineer
-Reviewer
-
-Goal: Production readiness
-
-ForgeMesh may construct:
-
-Engineering Manager
-Solutions Architect
-Security Engineer
-Database Engineer
-SRE
-DevOps Engineer
-Test Engineer
-Performance Engineer
-Reviewer
-
-The repository has not changed.
-
-The required workforce has.
+The registry represents available expertise, not simultaneously active agents.
 
 ⸻
 
-Explainable Selection
+Explainable Workforce Selection
 
-ForgeMesh should never produce an unexplained list of agents.
+ForgeMesh treats specialist selection as an engineering decision that should be inspectable.
 
-Every assignment can include evidence such as:
+A specialist assignment can explain its evidence:
 
-PostgreSQL Engineer
+POSTGRESQL ENGINEER
+────────────────────────────────────
 Selected because:
-• PostgreSQL dependency detected
-• 17 migration files identified
-• schema changes present in current work
-• requested task affects persistence layer
+✓ PostgreSQL dependency detected
+✓ 19 migration files identified
+✓ schema modifications affect current work
+✓ persistence layer is inside task scope
+Capabilities:
+• schema design
+• query optimization
+• migration review
+• indexing
+• transaction analysis
 
-or:
+Another assignment might be:
 
-Security Engineer
+APPLICATION SECURITY ENGINEER
+────────────────────────────────────
 Selected because:
-• authentication middleware detected
-• externally exposed API routes identified
-• authorization-sensitive changes requested
+✓ authentication middleware detected
+✓ externally exposed API routes identified
+✓ authorization-sensitive code affected
+✓ production-readiness review requested
 
-This turns workforce selection into an inspectable engineering decision.
+This produces an explainable chain:
+
+Evidence → Capability Requirement → Specialist Assignment
 
 ⸻
 
 Specialist Mesh
 
-Selected specialists form a dependency-aware mesh.
+ForgeMesh organizes selected specialists according to dependency and responsibility.
 
-They are not simply run in parallel.
+It does not treat them as an unordered collection of prompts.
 
-ForgeMesh can model relationships such as:
+A simple workflow may be:
 
 Planner
-   ↓
+   │
+   ▼
 Architect
-   ↓
+   │
+   ▼
 Implementation Specialist
-   ↓
+   │
+   ▼
 Test Specialist
-   ↓
-Security / Performance Review
-   ↓
+   │
+   ▼
+Security Review
+   │
+   ▼
 Independent Reviewer
 
-More complex work can branch:
-
-                 Architect
-                    │
-        ┌───────────┼───────────┐
-        ▼           ▼           ▼
-    Frontend     Backend      Database
-        │           │           │
-        └───────────┼───────────┘
-                    ▼
-                Integration
-                    │
-          ┌─────────┴─────────┐
-          ▼                   ▼
-       Testing             Security
-          │                   │
-          └─────────┬─────────┘
-                    ▼
-                 Review
-
-This creates a coordinated engineering process rather than isolated model responses.
+A larger task can branch into parallel specialist work before converging for integration and verification.
 
 ⸻
 
 Structured Handoffs
 
-Specialists communicate through structured handoffs.
+Specialists exchange bounded work products rather than uncontrolled conversation history.
 
-A handoff can contain:
+A ForgeMesh handoff can contain:
 
-Objective
-Relevant system context
-Evidence examined
-Changes proposed
-Changes completed
-Files affected
-Assumptions
-Risks
-Open questions
-Verification performed
-Recommended next specialist
+objective:
+system_context:
+evidence_examined:
+work_completed:
+files_affected:
+assumptions:
+risks:
+verification:
+unresolved_questions:
+recommended_next_specialist:
 
-This reduces the need for every specialist to consume the entire repository or full conversation history.
+Structured handoffs improve:
 
-It also creates traceability between stages of work.
-
-⸻
-
-Authority Boundaries
-
-Expertise and authority are separate concepts.
-
-A specialist being capable of performing an action does not automatically mean it is permitted to perform that action.
-
-ForgeMesh can distinguish authority such as:
-
-Observe
-Analyze
-Recommend
-Prepare changes
-Modify files
-Run tests
-Execute tools
-Operate infrastructure
-
-A security reviewer may therefore inspect code without permission to alter it.
-
-A database specialist may propose a migration without being allowed to deploy it.
-
-A reviewer can reject work without becoming its implementer.
-
-This separation creates a foundation for governed agentic engineering.
+* traceability
+* context efficiency
+* specialist isolation
+* reproducibility
+* review quality
+* orchestration
 
 ⸻
 
-Multi-Platform Compilation
+Governed Authority
 
-ForgeMesh uses canonical specialist definitions rather than maintaining unrelated agent libraries for every AI environment.
+<div align="center">
 
-The same workforce can be compiled into platform-specific configuration.
+Capability ≠ Authority
 
-Targets can include:
+</div>
+
+Being capable of performing an action does not automatically grant permission to perform it.
+
+ForgeMesh separates specialist expertise from execution authority.
+
+┌─────────────────────────┐
+│        OBSERVE          │
+├─────────────────────────┤
+│        ANALYZE          │
+├─────────────────────────┤
+│       RECOMMEND         │
+├─────────────────────────┤
+│     PREPARE CHANGES     │
+├─────────────────────────┤
+│      MODIFY FILES       │
+├─────────────────────────┤
+│       RUN TESTS         │
+├─────────────────────────┤
+│     EXECUTE TOOLS       │
+├─────────────────────────┤
+│ OPERATE INFRASTRUCTURE  │
+└─────────────────────────┘
+
+A reviewer can inspect and reject work without modifying it.
+
+A database specialist can prepare a migration without receiving production deployment authority.
+
+A security specialist can identify a vulnerability without automatically changing authentication behavior.
+
+This creates a foundation for controlled agentic engineering.
+
+⸻
+
+Multi-Platform Workforce Compilation
+
+ForgeMesh uses canonical specialist definitions.
+
+Platform-specific agent files are generated outputs.
+
+                ForgeMesh
+          Canonical Workforce
+                  │
+                  ▼
+         ┌─────────────────┐
+         │ Platform Compiler│
+         └────────┬────────┘
+                  │
+      ┌───────────┼───────────┐
+      │           │           │
+      ▼           ▼           ▼
+ Claude Code    Copilot    OpenCode
+      │           │           │
+      ▼           ▼           ▼
+   Native       Native       Native
+   Config       Config       Config
+
+Target environments can include:
 
 * Claude Code
 * GitHub Copilot
@@ -561,460 +573,418 @@ Targets can include:
 * Continue-compatible environments
 * generic agent systems
 * local LLM environments
-* future MCP-based runtimes
+* future MCP-compatible runtimes
 
-Conceptually:
-
-Canonical ForgeMesh Workforce
-             │
-             ▼
-      Platform Compiler
-             │
-   ┌─────────┼──────────┐
-   ▼         ▼          ▼
- Claude    Copilot    OpenCode
-   │         │          │
-   ▼         ▼          ▼
-Native     Native     Native
-Config     Config     Config
-
-Platform files are compiler outputs.
-
-The capability registry remains the source of truth.
+This allows the engineering workforce to remain conceptually stable while its runtime representation changes.
 
 ⸻
 
-Local & Private Operation
+Local & Private by Design
 
-Repository analysis should not require source code to be uploaded to an external AI provider.
+ForgeMesh is designed so fundamental repository analysis does not depend on sending source code to a remote AI provider.
 
-ForgeMesh is designed so core functionality can operate locally:
+LOCAL REPOSITORY
+       │
+       ▼
+LOCAL SCANNER
+       │
+       ▼
+SYSTEM MODEL
+       │
+       ▼
+DETERMINISTIC MATCHING
+       │
+       ▼
+WORKFORCE PLAN
 
-Repository
-    ↓
-Local Scanner
-    ↓
-System Model
-    ↓
-Deterministic Capability Matching
-    ↓
-Workforce Plan
+Optional intelligence can then use:
 
-Optional intelligence layers can then use:
+<table>
+<tr>
+<td>💻 <strong>Local models</strong></td>
+<td>Private model-assisted reasoning</td>
+</tr>
+<tr>
+<td>🏠 <strong>Local inference</strong></td>
+<td>Source remains on-device</td>
+</tr>
+<tr>
+<td>☁️ <strong>Cloud models</strong></td>
+<td>Optional external reasoning</td>
+</tr>
+<tr>
+<td>⚙️ <strong>Deterministic engine</strong></td>
+<td>No model required</td>
+</tr>
+</table>
 
-* local models
-* Ollama-compatible models
-* private inference infrastructure
-* cloud models
-
-Remote model access is an enhancement, not a requirement for fundamental repository detection and workforce selection.
+Remote inference is an enhancement rather than a prerequisite for core project detection and workforce matching.
 
 ⸻
 
 Deterministic + Model-Assisted Intelligence
 
-ForgeMesh supports two complementary reasoning paths.
+ForgeMesh combines explicit engineering signals with optional model reasoning.
 
-Deterministic analysis
-
-Uses repository evidence and explicit rules:
+Deterministic
 
 PostgreSQL detected
-→ database capability required
+        ↓
+Database capability relevant
 Kubernetes manifests detected
-→ Kubernetes capability relevant
+        ↓
+Kubernetes capability relevant
 Authentication changes detected
-→ security review required
-
-Model-assisted analysis
-
-An optional model can reason about less obvious relationships:
-
-Repository evidence
-+
-Architecture model
-+
-Requested objective
         ↓
-Reasoning model
-        ↓
-Additional capability recommendations
+Security review required
 
-The final workforce can combine both.
+Model-assisted
 
-This keeps the system useful without making an LLM responsible for every engineering decision.
+Repository Evidence
+        +
+Architecture Model
+        +
+Requested Objective
+        │
+        ▼
+Reasoning Model
+        │
+        ▼
+Additional Capability Analysis
+
+The two approaches can reinforce one another without making model inference the sole source of engineering decisions.
 
 ⸻
 
 Risk & Gap Analysis
 
-Repository intelligence can also identify areas requiring attention.
+Repository intelligence can identify engineering gaps that influence workforce construction.
 
-Example:
+<table>
+<tr>
+<th>Severity</th>
+<th>Example Finding</th>
+</tr>
+<tr>
+<td><strong>HIGH</strong></td>
+<td>Authentication routes lack integration coverage</td>
+</tr>
+<tr>
+<td><strong>HIGH</strong></td>
+<td>Database migration has no rollback strategy</td>
+</tr>
+<tr>
+<td><strong>MEDIUM</strong></td>
+<td>Container requires additional hardening</td>
+</tr>
+<tr>
+<td><strong>MEDIUM</strong></td>
+<td>Observability coverage is incomplete</td>
+</tr>
+<tr>
+<td><strong>LOW</strong></td>
+<td>Documentation differs from detected architecture</td>
+</tr>
+</table>
 
-HIGH
-Authentication routes lack integration coverage
-HIGH
-Database migration has no rollback strategy
-MEDIUM
-Container runs with unnecessary privileges
-MEDIUM
-Accessibility testing is absent
-LOW
-Documentation does not match current architecture
+Findings can automatically influence the workforce.
 
-Risk findings can directly influence workforce construction.
-
-A security finding may activate security specialists.
-
-A migration risk may activate database reliability expertise.
-
-A deployment issue may activate SRE or DevOps capabilities.
+Security finding
+      ↓
+Security capability
+      ↓
+Security specialist
+Migration risk
+      ↓
+Database reliability capability
+      ↓
+Database reliability specialist
 
 ⸻
 
-Governed Execution
+Execution Model
 
-The target execution model is:
+ForgeMesh is designed around an evidence-producing engineering lifecycle.
 
-Understand
-   ↓
-Plan
-   ↓
-Assign
-   ↓
-Execute
-   ↓
-Test
-   ↓
-Review
-   ↓
-Verify
-   ↓
-Record evidence
+UNDERSTAND
+    │
+    ▼
+PLAN
+    │
+    ▼
+ASSIGN
+    │
+    ▼
+EXECUTE
+    │
+    ▼
+TEST
+    │
+    ▼
+REVIEW
+    │
+    ▼
+VERIFY
+    │
+    ▼
+RECORD EVIDENCE
 
-Execution should remain bounded by:
+Execution can be constrained by:
 
-* explicit task scope
+* task scope
 * specialist authority
-* repository context
+* repository boundaries
 * tool permissions
-* verification requirements
 * quality gates
-
-The workforce should be capable of rejecting unsafe or inadequately verified work rather than optimizing only for task completion.
+* verification requirements
+* risk level
 
 ⸻
 
 Independent Verification
 
-The specialist performing work should not always be the specialist deciding whether that work is correct.
-
-ForgeMesh supports independent verification.
-
-For example:
+The specialist implementing a change should not necessarily be the specialist deciding whether the change is correct.
 
 Backend Engineer
-      ↓
-implements change
-      ↓
+       │
+       ▼
+Implementation
+       │
+       ▼
 Test Engineer
-      ↓
-validates behavior
-      ↓
+       │
+       ▼
 Security Engineer
-      ↓
-checks security impact
-      ↓
-Reviewer
-      ↓
-accept / reject
+       │
+       ▼
+Independent Reviewer
+       │
+       ▼
+ACCEPT / REJECT
 
 Verification can include:
 
 * unit tests
 * integration tests
 * E2E tests
-* static analysis
 * type checking
+* static analysis
 * security scanning
 * dependency analysis
 * performance testing
 * architecture review
-* policy checks
+* policy validation
 
 ⸻
 
-Evidence
+Evidence & Traceability
 
-Agentic engineering becomes much more useful when decisions can be inspected afterward.
+ForgeMesh is designed to preserve the path between a system observation and an engineering outcome.
 
-ForgeMesh can retain evidence describing:
+Repository Evidence
+        ↓
+Engineering Finding
+        ↓
+Capability Requirement
+        ↓
+Specialist Selection
+        ↓
+Work Assignment
+        ↓
+Execution
+        ↓
+Verification
+        ↓
+Outcome
 
-Why a specialist was selected
-What repository evidence was used
-What work was assigned
-What files changed
-What tools were executed
-What tests ran
-What failed
-What passed
-What reviewers concluded
-What remains unresolved
+Evidence can include:
 
-This creates a traceable path from:
-
-repository evidence → engineering decision → execution → verification
+* why a specialist was selected
+* repository signals examined
+* work assigned
+* files affected
+* tools executed
+* tests performed
+* failures encountered
+* review decisions
+* unresolved risks
+* final verification
 
 ⸻
 
-Measuring Workforce Performance
+Workforce Evaluation
 
-ForgeMesh is designed to make multi-agent engineering measurable.
+ForgeMesh is intended to make agentic engineering measurable.
 
 Potential metrics include:
 
-* task completion rate
-* tests passed
-* defects introduced
-* defects detected
-* security findings
-* review rejection rate
-* number of iterations
-* execution duration
-* token consumption
-* model cost
-* specialist utilization
-* failed handoffs
-* rework
-* regression rate
+Metric	Purpose
+Task completion	Was the objective achieved?
+Tests passed	Did expected behavior survive?
+Defects introduced	Did the work create regressions?
+Defects detected	Did specialist review catch problems?
+Review rejection	How often was work returned?
+Iterations	How much rework was required?
+Execution time	How long did the workflow take?
+Token usage	How much model context was consumed?
+Model cost	What did execution cost?
+Specialist utilization	Which capabilities contributed?
+Failed handoffs	Where did orchestration break down?
 
-This allows different workforce strategies to be compared experimentally.
+This enables experiments such as:
 
-For example:
+<div align="center">
 
 General Coding Agent
-        VS
+
+vs
+
 ForgeMesh Specialist Workforce
 
-Rather than assuming that specialization improves engineering outcomes, ForgeMesh can gather evidence.
+</div>
 
-⸻
-
-Engineering Domains
-
-ForgeMesh’s capability registry spans a wide engineering surface.
-
-Examples include:
-
-Software Engineering
-
-TypeScript · JavaScript · Python · Rust · Go · Java · Kotlin · PHP · Ruby · C++ · C# · Swift · Dart · Scala · Elixir and more.
-
-Frontend
-
-React · Next.js · Vue · Nuxt · Angular · Svelte · SolidJS · WebGL · accessibility · frontend performance.
-
-Backend
-
-Node.js · Express · NestJS · Django · FastAPI · Rails · Laravel · Spring Boot · GraphQL · gRPC · realtime systems.
-
-Data
-
-PostgreSQL · MySQL · MongoDB · Redis · Cassandra · Elasticsearch · Neo4j · ClickHouse · Snowflake · BigQuery · Databricks · vector databases.
-
-Infrastructure
-
-Docker · Kubernetes · Helm · CI/CD · GitOps · cloud infrastructure · service meshes · networking · edge systems.
-
-AI
-
-LLMs · RAG · agent systems · machine learning · deep learning · NLP · computer vision · AI evaluation · LLMOps · AI safety.
-
-Security
-
-AppSec · cloud security · IAM · threat modelling · penetration testing · DevSecOps · incident response · digital forensics · supply-chain security.
-
-Specialized Engineering
-
-Payments · fintech · healthtech · e-commerce · blockchain · WebRTC · robotics · GPU computing · embedded systems · GIS · AR/VR · automation and more.
+The objective is to measure whether specialization improves engineering outcomes, not merely assume that it does.
 
 ⸻
 
 CLI
 
-ForgeMesh’s CLI is intended to provide a fast interface to the workforce compiler.
-
-The target workflow is:
+The ForgeMesh CLI is being designed around a small set of composable operations.
 
 forgemesh scan
 
-Inspect the current project and produce its system fingerprint.
+Analyze the current project.
 
 forgemesh workforce
 
-Construct a recommended workforce.
+Construct a recommended specialist workforce.
 
 forgemesh workforce --goal "make this production ready"
 
-Compile specialists around a specific objective.
+Build a workforce around a specific objective.
 
 forgemesh explain
 
-Explain why each specialist and capability was selected.
-
-forgemesh compile --target claude
-
-Generate native configuration for a supported environment.
-
-forgemesh compile --target copilot
-
-Compile the same canonical workforce for another platform.
+Explain specialist-selection decisions.
 
 forgemesh audit
 
-Analyze risks and capability gaps.
+Analyze engineering risks and capability gaps.
+
+forgemesh compile --target claude
+
+Compile the workforce for a supported environment.
 
 forgemesh verify
 
-Run the appropriate verification pipeline.
+Run the appropriate verification workflow.
 
-The exact command surface will evolve with the implementation while preserving the underlying architecture.
+The command surface will evolve as ForgeMesh’s runtime is completed while preserving the underlying architecture.
 
 ⸻
 
-Machine-Readable Intelligence
+Canonical Data Model
 
-ForgeMesh is designed around structured models rather than terminal output alone.
+ForgeMesh is being normalized around structured engineering concepts.
+
+SpecialistProfile
+       │
+       ├── Capability
+       ├── ProjectSignal
+       └── AuthorityRequirement
+SystemModel
+       │
+       ├── Architecture
+       ├── Dependency
+       └── RiskFinding
+WorkRequest
+       │
+       ▼
+WorkforcePlan
+       │
+       ├── SpecialistAssignment
+       ├── AuthorityEnvelope
+       └── Handoff
+VerificationResult
+       │
+       ▼
+OutcomeMetric
 
 Core concepts include:
 
-SpecialistProfile
-Capability
-ProjectSignal
-SystemModel
-RiskFinding
-WorkRequest
-WorkforcePlan
-SpecialistAssignment
-AuthorityEnvelope
-Handoff
-VerificationResult
-OutcomeMetric
+* SpecialistProfile
+* Capability
+* ProjectSignal
+* SystemModel
+* RiskFinding
+* WorkRequest
+* WorkforcePlan
+* SpecialistAssignment
+* AuthorityEnvelope
+* Handoff
+* VerificationResult
+* OutcomeMetric
 
-This allows the same engine to support:
-
-* CLI workflows
-* CI/CD
-* GitHub automation
-* visual interfaces
-* APIs
-* IDE integrations
-* agent runtimes
-* research and evaluation
-
-⸻
-
-Visual Workforce Intelligence
-
-A future visual surface can expose the system ForgeMesh has inferred.
-
-Architecture
-
-Frontend
-   │
-   ▼
-API Layer
-   │
-   ├────► Authentication
-   │
-   ▼
-Services
-   │
-   ├────► Redis
-   │
-   ▼
-PostgreSQL
-
-Workforce
-
-Engineering Manager
-        │
-        ▼
-Architect
-        │
- ┌──────┼───────┐
- ▼      ▼       ▼
-Web   Database Security
- │      │       │
- └──────┼───────┘
-        ▼
-     Reviewer
-
-Execution
-
-✓ Architecture analysis
-✓ Database review
-● Backend implementation
-○ Integration testing
-○ Security review
-○ Final verification
-
-The visual interface remains a view over the same canonical ForgeMesh models used by the CLI and automation layers.
+Structured models allow the same ForgeMesh engine to support CLI, CI/CD, IDE, API and visual interfaces.
 
 ⸻
 
 Architecture Principles
 
-ForgeMesh follows several core principles.
+<table>
+<tr>
+<td width="50%" valign="top">
 
 Evidence before assignment
 
-Specialists are selected because repository or task evidence justifies them.
+Specialists are selected because project or task evidence justifies their involvement.
 
 Minimum sufficient workforce
 
 More agents are not automatically better.
 
-ForgeMesh should construct the smallest team capable of responsibly completing the work.
+Capability ≠ authority
 
-Expertise does not equal authority
-
-Capability and permission are modeled separately.
+Expertise never implicitly grants execution permission.
 
 Canonical definitions
 
-Specialists have one authoritative representation from which platform-specific configurations are generated.
+Platform configurations are generated from authoritative specialist definitions.
+
+</td>
+<td width="50%" valign="top">
 
 Structured handoffs
 
-Context moves through explicit work products rather than uncontrolled conversation chains.
+Context moves through explicit engineering work products.
 
 Independent verification
 
-Implementation and approval should be separable responsibilities.
+Implementation and approval can be separate responsibilities.
 
 Local first
 
-Core repository intelligence and workforce matching should work without mandatory cloud inference.
+Core analysis should not require cloud inference.
 
-Explainability
+Measurable outcomes
 
-Important selections and decisions should expose their reasoning and evidence.
+Agentic engineering should be evaluated through evidence.
 
-Measurability
-
-Agentic engineering should be evaluated using outcomes rather than claims.
+</td>
+</tr>
+</table>
 
 ⸻
 
-Example
+Example: Production Readiness
 
-A developer asks:
+A developer gives ForgeMesh an application and asks:
 
-Make this application production ready.
+Make this system production ready.
 
-ForgeMesh scans the repository and discovers:
+1 — System discovery
+
+ForgeMesh identifies:
 
 Next.js
 TypeScript
@@ -1027,18 +997,18 @@ AWS
 26 API routes
 19 database migrations
 84 tests
-Authentication system
-Background job processing
+Authentication
+Background processing
 
-It identifies:
+2 — Risk analysis
 
-HIGH    Missing authorization tests
-HIGH    Migration rollback gap
+HIGH    Authorization integration coverage incomplete
+HIGH    Migration rollback strategy missing
 MEDIUM  Container hardening required
-MEDIUM  Limited observability
-LOW     Documentation drift
+MEDIUM  Observability coverage incomplete
+LOW     Architecture documentation drift
 
-ForgeMesh compiles:
+3 — Workforce compilation
 
 Engineering Manager
 Solutions Architect
@@ -1052,60 +1022,84 @@ SRE
 Test Engineer
 Independent Reviewer
 
-Each assignment includes evidence explaining why it exists.
+4 — Execution topology
 
-The resulting workflow becomes:
+                 System Analysis
+                       │
+                       ▼
+               Architecture Review
+                       │
+                       ▼
+                Risk Decomposition
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+  Application       Database     Infrastructure
+  Engineering      Engineering     Engineering
+        │              │              │
+        └──────────────┼──────────────┘
+                       ▼
+                   Integration
+                       │
+              ┌────────┴────────┐
+              ▼                 ▼
+           Testing           Security
+              │                 │
+              └────────┬────────┘
+                       ▼
+             Independent Review
+                       │
+                       ▼
+                Evidence Report
 
-System analysis
-      ↓
-Architecture review
-      ↓
-Risk decomposition
-      ↓
-Parallel specialist work
-      ↓
-Integration
-      ↓
-Testing
-      ↓
-Security review
-      ↓
-Independent verification
-      ↓
-Evidence report
+Every assignment is connected to evidence.
 
-That is the core ForgeMesh model.
+Every important change can be verified.
+
+Every specialist operates within an explicit role.
+
+⸻
+
+Product Direction
+
+ForgeMesh is being developed toward a straightforward interaction:
+
+<div align="center">
+
+Give ForgeMesh a software system and a goal.
+
+</div>
+
+ForgeMesh determines:
+
+1. What is this system?
+2. How is it constructed?
+3. What engineering risks exist?
+4. What capabilities are required?
+5. Which specialists should participate?
+6. What is each specialist allowed to do?
+7. How should work move between them?
+8. How should the result be verified?
+9. What evidence demonstrates success?
+
+The objective is not to create the largest collection of agents.
+
+The objective is to make engineering expertise dynamically composable.
 
 ⸻
 
-Direction
-
-ForgeMesh is being developed toward a simple outcome:
-
-Give it a software system and a goal.
-
-ForgeMesh should determine:
-
-1. what the system is,
-2. how it is constructed,
-3. what risks and engineering needs exist,
-4. what expertise is required,
-5. which specialists should participate,
-6. what each specialist is allowed to do,
-7. how work should flow between them,
-8. how the result should be verified,
-9. and what evidence demonstrates that the work succeeded.
-
-The long-term objective is not to create more agents.
-
-It is to make engineering expertise dynamically composable.
-
-⸻
+<div align="center">
 
 ForgeMesh
 
 Adaptive Engineering Workforce
 
-Repository Intelligence · Capability Mapping · Workforce Compilation · Specialist Orchestration · Governed Execution · Independent Verification
+Repository Intelligence · Capability Mapping · Workforce Compilation
+
+Specialist Orchestration · Governed Execution · Independent Verification
+
+<br />
 
 Scan the system. Assemble the specialists. Execute with evidence.
+
+</div>
