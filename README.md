@@ -29,6 +29,18 @@ Those specialists are organized into a coordinated workforce with explicit respo
 
 ForgeMesh does not ask which agents you want. It determines which engineering capabilities the work requires.
 
+## Quick start and validation
+
+Clone the repository and run its manifest-defined validation script:
+
+```bash
+git clone https://github.com/Masterleeaus/ForgeMesh.git
+cd ForgeMesh
+npm run validate
+```
+
+The repository also provides `npm run generate` to generate native agent files from its source. Review the generated diff before committing. This README describes the system's product direction; the example workforce and capability descriptions are not a claim that every workflow is production-ready.
+
 ⸻
 
 How ForgeMesh Works
