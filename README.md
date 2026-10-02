@@ -1105,3 +1105,8 @@ Specialist Orchestration · Governed Execution · Independent Verification
 Scan the system. Assemble the specialists. Execute with evidence.
 
 </div>
+
+
+## Provenance and license
+
+The root `package.json` still identifies the upstream repository as [`CrimsonDevil333333/agents-profiles`](https://github.com/CrimsonDevil333333/agents-profiles) and declares MIT licensing. The root `LICENSE` carries that upstream copyright notice. Preserve the notice and verify contribution provenance before presenting this as wholly original work. The manifest's package name and repository URL should be updated after lineage review.
