@@ -29,6 +29,13 @@ Those specialists are organized into a coordinated workforce with explicit respo
 
 ForgeMesh does not ask which agents you want. It determines which engineering capabilities the work requires.
 
+## Product architecture and engineering highlights
+
+ForgeMesh turns repository evidence into a task-specific engineering workforce by selecting specialists to match a system’s architecture, risks, and goal.
+
+- **Architecture:** Repository intelligence feeds a normalized system model; a workforce compiler selects a minimum-sufficient team from a registry of 144 profiles across 20 categories, then platform tooling generates native specialist files.
+- **Distinctive engineering:** The distinctive idea is dynamic workforce composition: assemble only the capabilities the task needs, show why each specialist was selected, and keep responsibilities and verification explicit.
+
 ## Quick start and validation
 
 Clone the repository and run its manifest-defined validation script:
