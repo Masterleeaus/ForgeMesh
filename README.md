@@ -1,3 +1,5 @@
+![ForgeMesh Adaptive Engineering Workforce — REPOSITORY INTELLIGENCE · SPECIALIST TEAMS](docs/images/portfolio-banner.svg)
+
 <div align="center">
 
 <h1 align="center">ForgeMesh Adaptive Engineering Workforce</h1>
