@@ -1,4 +1,4 @@
-name: Unpack repository archive
+name: Validate repository archive
 
 on:
   push:
@@ -9,21 +9,28 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  unpack:
+  archive-validation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Unpack archive into repository root
+      - name: Validate archive without mutating the checkout
         shell: bash
         run: |
           set -euo pipefail
           ZIP='agents-profiles-main.zip'
+          if [ ! -f "$ZIP" ]; then
+            echo 'No repository archive is present; archive validation is not applicable.'
+            exit 0
+          fi
+
+          unzip -t "$ZIP"
           WORK="$(mktemp -d)"
+          trap 'rm -rf "$WORK"' EXIT
           unzip -q "$ZIP" -d "$WORK"
 
           shopt -s dotglob nullglob
@@ -34,25 +41,4 @@ jobs:
             SOURCE="$WORK"
           fi
 
-          for item in "$SOURCE"/*; do
-            name="$(basename "$item")"
-            [ "$name" = '.git' ] && continue
-            [ "$name" = '.github' ] && continue
-            cp -a "$item" ./
-          done
-
-          rm -f "$ZIP"
-
-      - name: Commit unpacked files
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          if git diff --cached --quiet; then
-            echo 'No changes to commit.'
-            exit 0
-          fi
-          git commit -m 'Unpack repository source archive'
-          git push
+          echo "Archive validated for read-only inspection from: $SOURCE"
