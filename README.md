@@ -33,7 +33,7 @@ ForgeMesh does not ask which agents you want. It determines which engineering ca
 
 ForgeMesh turns repository evidence into a task-specific engineering workforce by selecting specialists to match a system’s architecture, risks, and goal.
 
-- **Architecture:** Repository intelligence feeds a normalized system model; a workforce compiler selects a minimum-sufficient team from a registry of 144 profiles across 20 categories, then platform tooling generates native specialist files.
+- **Architecture:** Repository intelligence feeds a normalized system model; a workforce compiler selects a minimum-sufficient team from the root registry of 340 source profiles across 22 categories, then platform tooling generates native specialist files.
 - **Distinctive engineering:** The distinctive idea is dynamic workforce composition: assemble only the capabilities the task needs, show why each specialist was selected, and keep responsibilities and verification explicit.
 
 ## Quick start and validation
@@ -47,6 +47,39 @@ npm run validate
 ```
 
 The repository also provides `npm run generate` to generate native agent files from its source. Review the generated diff before committing. This README describes the system's product direction; the example workforce and capability descriptions are not a claim that every workflow is production-ready.
+
+## Repository shape and runnable surfaces
+
+ForgeMesh currently contains two related but distinct layers:
+
+- **Root corpus:** 340 canonical source profile files across 22 category directories, plus generated native outputs for Claude, GitHub Copilot, and OpenCode. These are the maintained workforce definitions and platform projections.
+- **Nested CLI:** [`agents-profiles-cli/`](agents-profiles-cli/) is a separate TypeScript package with a curated 144-profile catalog across the same 22 domains. It provides the executable `forgemesh` commands for project detection, matching, and multi-platform configuration.
+
+Validate the root corpus:
+
+```bash
+npm run validate
+```
+
+Build and inspect the nested CLI:
+
+```bash
+cd agents-profiles-cli
+npm install
+npm run build
+node dist/bin/cli.js --help
+node dist/bin/cli.js detect .
+```
+
+The root `npm run generate` command regenerates native agent projections from the canonical corpus. Review its diff before committing generated output. The optional model-assisted analyzer is an enhancement; deterministic project detection and catalog matching do not require an API key.
+
+> Repository metadata: `total_agents: 340` canonical source profiles across 22 categories. Native-agent files are generated projections, not additional source profiles.
+
+### Evidence boundary
+
+The checked-in validation script audits link coverage, required handoff sections, native-agent counts, slug conventions, and metadata consistency. It does not prove that every generated profile is technically correct, that a selected workforce is optimal, or that a downstream AI platform will execute every generated configuration without adaptation.
+
+⸻
 
 ⸻
 
