@@ -35,8 +35,17 @@ echo ""
 echo "--- File Counts ---"
 # Count only agent files in category directories (not root docs)
 agent_files=$(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null | wc -l)
+readme_links=$(python3 - <<'PY'
+import re
+from pathlib import Path
+
+readme = Path("README.md").read_text(encoding="utf-8")
+for link in sorted(set(re.findall(r"\\(([^()]+\\.md)\\)", readme))):
+    print(link)
+PY
+)
 echo "Source agent files: $agent_files"
-echo "README links: $(grep -oP '\([^()]+\.md\)' README.md | sed 's/[()]//g' | sort -u | wc -l)"
+echo "README links: $(printf '%s\\n' "$readme_links" | sed '/^$/d' | wc -l)"
 echo ""
 
 # 2. Broken link check
@@ -44,7 +53,7 @@ echo "--- Broken Links ---"
 broken=0
 while read -r f; do
   [ ! -f "$f" ] && echo "  BROKEN: $f" && broken=$((broken + 1))
-done < <(grep -oP '\([^()]+\.md\)' README.md | sed 's/[()]//g' | sort -u)
+done <<< "$readme_links"
 [ "$broken" -eq 0 ] && echo "  All README links resolve ✓"
 echo ""
 
@@ -142,7 +151,17 @@ echo ""
 
 # 9. Verify README metadata matches actual count
 echo "--- README Metadata ---"
-readme_count=$(grep -oP 'total_agents: \K\d+' README.md)
+readme_count=$(python3 - <<'PY'
+import re
+from pathlib import Path
+
+readme = Path("README.md").read_text(encoding="utf-8")
+match = re.search(r"total_agents:\s*(\d+)", readme)
+if not match:
+    raise SystemExit("README metadata missing total_agents")
+print(match.group(1))
+PY
+)
 source_count=$(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null | wc -l)
 echo "  README claims: $readme_count agents"
 echo "  Actual source: $source_count agents"
