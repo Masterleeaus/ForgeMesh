@@ -1,4 +1,4 @@
-![ForgeMesh Adaptive Engineering Workforce — REPOSITORY INTELLIGENCE · SPECIALIST TEAMS](docs/images/portfolio-banner.svg)
+![ForgeMesh — repository detection, capability matching, specialist profiles, generated configuration, and human review](docs/images/forgemesh-banner.svg)
 
 <div align="center">
 
@@ -53,6 +53,10 @@ The interactive init command can instead fetch specialist definitions from GitHu
 - **Canonical-to-native compilation:** the root corpus is the source of truth; generated native files are projections for OpenCode, Claude and GitHub Copilot. The CLI also knows how to emit configs for Cursor, Windsurf, Aider, Continue, Generic and custom providers.
 - **Offline and recoverable setup:** the CLI supports the offline flag, atomic writes and rollback-on-failure behavior, so configuration generation can be reviewed locally and does not depend on a model call.
 - **Explicit responsibility contracts:** profiles contain descriptions, categories, optional permission levels/tools, handoff protocols and anti-pattern guidance. A profile is a capability definition, not a running agent.
+
+<p align="center">
+  <img src="docs/images/forgemesh-architecture.svg" alt="ForgeMesh flow from target repository and project detector through capability matching and specialist profiles to generated configuration and human review." width="100%" />
+</p>
 
 ## Architecture
 
