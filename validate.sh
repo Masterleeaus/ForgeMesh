@@ -51,9 +51,11 @@ echo ""
 # 2. Broken link check
 echo "--- Broken Links ---"
 broken=0
-while read -r f; do
-  [ ! -f "$f" ] && echo "  BROKEN: $f" && broken=$((broken + 1))
-done <<< "$readme_links"
+if [ -n "$readme_links" ]; then
+  while read -r f; do
+    [ ! -f "$f" ] && echo "  BROKEN: $f" && broken=$((broken + 1))
+  done <<< "$readme_links"
+fi
 [ "$broken" -eq 0 ] && echo "  All README links resolve ✓"
 echo ""
 
