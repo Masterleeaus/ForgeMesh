@@ -1,4 +1,4 @@
-# Contributing to Multi-Agent Engineering System
+# Contributing to ForgeMesh
 
 Thanks for helping improve the agent library!
 
