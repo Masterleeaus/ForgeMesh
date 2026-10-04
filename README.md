@@ -1,4 +1,4 @@
-![ForgeMesh Adaptive Engineering Workforce — REPOSITORY INTELLIGENCE · SPECIALIST TEAMS](docs/images/portfolio-banner.svg)
+![ForgeMesh Adaptive Engineering Workforce — REPOSITORY INTELLIGENCE · SPECIALIST TEAMS](docs/images/forgemesh-banner.svg)
 
 <div align="center">
 
@@ -30,6 +30,10 @@ Those specialists are organized into a coordinated workforce with explicit respo
 ForgeMesh does not ask which agents you want. It determines which engineering capabilities the work requires.
 
 ## Product architecture and engineering highlights
+
+<p align="center">
+  <img src="docs/images/forgemesh-architecture.svg" alt="ForgeMesh flow from repository intelligence through normalized system model, capability matching, platform projections, bounded execution, and verification" width="100%" />
+</p>
 
 ForgeMesh turns repository evidence into a task-specific engineering workforce by selecting specialists to match a system’s architecture, risks, and goal.
 
