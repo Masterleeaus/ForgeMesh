@@ -1,7 +1,7 @@
 {
   "name": "agents-profiles",
   "version": "2.1.0",
-  "description": "Multi-Agent Engineering System — 144 agent profiles across 20 categories",
+  "description": "ForgeMesh Adaptive Engineering Workforce — 340 canonical source profiles across 22 categories; nested CLI catalog contains 144 profiles",
   "private": true,
   "scripts": {
     "validate": "bash validate.sh",
