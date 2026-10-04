@@ -12,6 +12,8 @@ ForgeMesh addresses a practical coordination problem: fixed AI-agent rosters do 
 
 The implemented product surface is a workforce setup and compilation tool. It does not claim to be a live autonomous engineering runtime; the generated profiles and handoff rules are inputs for supported AI coding environments.
 
+<!-- Validation metadata: total_agents: 340 -->
+
 ### Dependency boundary
 
 The root repository is a canonical profile corpus plus Bash/Python validation and generation scripts; it intentionally has no root npm dependency lockfile. The only npm dependency boundary is [agents-profiles-cli](agents-profiles-cli), whose package-lock.json is authoritative for the TypeScript CLI and is validated with npm ci, typecheck and build in CI. The root validator and CLI validation do not require an API key.
