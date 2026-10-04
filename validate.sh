@@ -40,12 +40,12 @@ import re
 from pathlib import Path
 
 readme = Path("README.md").read_text(encoding="utf-8")
-for link in sorted(set(re.findall(r"\\(([^()]+\\.md)\\)", readme))):
+for link in sorted(set(re.findall(r"\(([^()]+\.md)\)", readme))):
     print(link)
 PY
 )
 echo "Source agent files: $agent_files"
-echo "README links: $(printf '%s\\n' "$readme_links" | sed '/^$/d' | wc -l)"
+echo "README links: $(printf '%s\n' "$readme_links" | sed '/^$/d' | wc -l)"
 echo ""
 
 # 2. Broken link check
