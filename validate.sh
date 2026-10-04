@@ -3,13 +3,38 @@ set -euo pipefail
 
 # validate.sh — Audit the agent repository for consistency and completeness
 
+CATEGORY_DIRS=(
+  "business-analysis"
+  "business-revenue"
+  "cloud-infra-architecture"
+  "cloud-providers"
+  "compliance-legal-finance"
+  "content-communication"
+  "data-intelligence"
+  "database-specialists"
+  "design-architecture"
+  "engineering-dev"
+  "executive"
+  "frontend-frameworks"
+  "game-development"
+  "infrastructure-ops"
+  "it-support"
+  "language-specific"
+  "orchestration"
+  "people-culture"
+  "planning-oversight"
+  "specialized-engineering"
+  "system-extensibility"
+  "testing-quality"
+)
+
 echo "=== Agent Repository Validation ==="
 echo ""
 
 # 1. Count agent files vs README links
 echo "--- File Counts ---"
 # Count only agent files in category directories (not root docs)
-agent_files=$(find . -mindepth 2 -name '*.md' ! -path './node_modules/*' ! -path './.git/*' ! -path './native-agents/*' 2>/dev/null | wc -l)
+agent_files=$(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null | wc -l)
 echo "Source agent files: $agent_files"
 echo "README links: $(grep -oP '\([^()]+\.md\)' README.md | sed 's/[()]//g' | sort -u | wc -l)"
 echo ""
@@ -31,7 +56,7 @@ while read -r f; do
     echo "  MISSING: $f"
     missing=$((missing + 1))
   fi
-done < <(find . -name '*.md' ! -path './README.md' ! -path './node_modules/*' ! -path './.git/*' ! -path './native-agents/*')
+done < <(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null)
 [ "$missing" -eq 0 ] && echo "  All agents have Handoff Protocol ✓"
 echo ""
 
@@ -43,7 +68,7 @@ while read -r f; do
     echo "  MISSING: $f"
     missing_ap=$((missing_ap + 1))
   fi
-done < <(find . -name '*.md' ! -path './README.md' ! -path './node_modules/*' ! -path './.git/*' ! -path './native-agents/*')
+done < <(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null)
 [ "$missing_ap" -eq 0 ] && echo "  All agents have Anti-Patterns ✓"
 echo ""
 
@@ -55,7 +80,7 @@ while read -r f; do
     echo "  MISSING: $f"
     missing_pm=$((missing_pm + 1))
   fi
-done < <(find . -name '*.md' ! -path './README.md' ! -path './node_modules/*' ! -path './.git/*' ! -path './native-agents/*')
+done < <(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null)
 [ "$missing_pm" -eq 0 ] && echo "  All agents have Personality Matrix ✓"
 echo ""
 
@@ -118,7 +143,7 @@ echo ""
 # 9. Verify README metadata matches actual count
 echo "--- README Metadata ---"
 readme_count=$(grep -oP 'total_agents: \K\d+' README.md)
-source_count=$(find . -mindepth 2 -name '*.md' ! -path './node_modules/*' ! -path './.git/*' ! -path './native-agents/*' 2>/dev/null | wc -l)
+source_count=$(find "${CATEGORY_DIRS[@]}" -type f -name '*.md' 2>/dev/null | wc -l)
 echo "  README claims: $readme_count agents"
 echo "  Actual source: $source_count agents"
 [ "$readme_count" -eq "$source_count" ] && echo "  Match ✓" || echo "  MISMATCH ✗"

@@ -73,6 +73,8 @@ node dist/bin/cli.js detect .
 
 The root `npm run generate` command regenerates native agent projections from the canonical corpus. Review its diff before committing generated output. The optional model-assisted analyzer is an enhancement; deterministic project detection and catalog matching do not require an API key.
 
+> Repository metadata: `total_agents: 340` canonical source profiles across 22 categories. Native-agent files are generated projections, not additional source profiles.
+
 ### Evidence boundary
 
 The checked-in validation script audits link coverage, required handoff sections, native-agent counts, slug conventions, and metadata consistency. It does not prove that every generated profile is technically correct, that a selected workforce is optimal, or that a downstream AI platform will execute every generated configuration without adaptation.
