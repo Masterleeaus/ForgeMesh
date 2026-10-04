@@ -8,9 +8,63 @@
 
 </div>
 
+## Overview
+
 ForgeMesh addresses a practical coordination problem: fixed AI-agent rosters do not reflect the languages, frameworks, infrastructure, tests or risks of the repository in front of them. This repository combines a canonical specialist-profile corpus with a TypeScript CLI that detects project signals, matches capabilities and generates platform-specific configuration.
 
 The implemented product surface is a workforce setup and compilation tool. It does not claim to be a live autonomous engineering runtime; the generated profiles and handoff rules are inputs for supported AI coding environments.
+
+
+## Measured evidence
+
+ForgeMesh's current evidence is **reproducible corpus and compiler verification**, not a claim that its selected workforce is objectively optimal.
+
+| Verifiable property | Current state | Reproduce / inspect |
+| --- | --- | --- |
+| Canonical root specialist profiles | **340** across **22** category directories | `npm run validate` |
+| Executable CLI catalog | **144** profiles across **22** domains | `agents-profiles-cli/` |
+| Root corpus validation | Checks counts, links, required handoff/anti-pattern sections, metadata, slugs, native outputs, and README consistency | `npm run validate` |
+| CLI dependency/build boundary | Clean install, typecheck, and build are explicit | `cd agents-profiles-cli && npm ci && npm run typecheck && npm run build` |
+| Project detection and matching | **Implemented** | `node dist/bin/cli.js detect ..` |
+| Optimal team selection / downstream agent quality | **Not established** | requires future task benchmark |
+
+These counts describe checked-in artifacts, not independent performance metrics. Native projections are not counted as additional specialists, and the root corpus and nested CLI catalog remain separate maintained layers.
+
+## What is new
+
+ForgeMesh's technical signature is a **repository-to-workforce compiler**: it fingerprints a target codebase, maps detected capabilities and risks to specialist profiles, then emits configuration for supported AI coding environments.
+
+```text
+Target repository
+      ↓
+Project fingerprint
+      ↓
+Capability matching
+      ↓
+Minimum-sufficient specialist set
+      ↓
+Platform-specific generation
+      ↓
+Human review
+```
+
+Distinguishing implementation choices:
+
+- **Evidence-driven detection** — language, framework, data, infrastructure, CI, test, AI/ML, monitoring, mobile, embedded, and other repository signals feed selection.
+- **Minimum-sufficient composition** — the matcher starts from orchestration/review foundations and adds specialists justified by detected needs.
+- **Canonical-to-native compilation** — one specialist corpus can produce environment-specific configuration rather than maintaining unrelated copies by hand.
+- **Offline deterministic path** — detection and catalog matching can run without an API key or model call.
+- **Atomic generation and rollback** — setup can be reviewed locally and recovered when generation fails.
+- **Explicit provenance boundary** — the repository preserves upstream lineage instead of presenting the inherited corpus as wholly original work.
+
+### Evidence status
+
+- **Implemented:** detector, matcher, profile catalog, platform registry, generators, offline setup, and validation scripts.
+- **Verified by deterministic checks:** corpus structure plus CLI install/typecheck/build lanes.
+- **Optional / experimental:** model-assisted recommendations.
+- **Environment-dependent:** network fetching and downstream coding-platform interpretation.
+- **Not claimed:** autonomous repository mutation, optimal team composition, or production quality of downstream agents.
+
 
 <!-- Validation metadata: total_agents: 340 -->
 
